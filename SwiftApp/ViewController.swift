@@ -9,8 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-
+    
+    
     @IBOutlet weak var theLabel: UILabel!
     
     @IBOutlet weak var Text1: UITextField!
@@ -18,13 +18,20 @@ class ViewController: UIViewController {
     @IBOutlet weak var Text2: UITextField!
     
     @IBAction func buttonTapped(_ sender: Any) {
-        theLabel.text = "\(Double(Text1.text!)! + Double(Text2.text!)!)"
+        
+        var addition :Bool = true
+        
+        if addition {
+            theLabel.text = "\(Double(Text1.text!)! + Double(Text2.text!)!)"
         }
+        else {
+            theLabel.text = "\(Double(Text1.text!)! - Double(Text2.text!)!)"
+        }}
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-    
+        
         
         
     }
@@ -34,7 +41,7 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    
 }
 
